@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #d1cccc;
+}
+
+.container {
+    background-color: #d1cccc;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+/* General styling for cards */
+.add-card, .word-card, .search-card, .result-card {
+    background-color: #d6e3f2;
+    box-shadow: 0 14px 14px rgb(171, 186, 231);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+}
+
+/* Card content */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Dividers */
+#title-divider, #add-divider, #word-list-divider, #result-divider {
+    border: 0;
+    border-top: 3px solid black;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Titles*/
+#main-title, #add-title, #word-list-title, #result-title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Input fields */
+.input-word, .input-desc, #search-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Placeholder */
+#search-input::placeholder, .input-word::placeholder, .input-desc::placeholder {
+    font-weight: bold;
+    color: #888;
+}
+
+/* Error messages */
+.error-msg {
+    color: rgb(110, 42, 42);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+/* Button styling */
+.button-group {
+    text-align: center;
+    width: 100%; 
+}
+
+#btn-add, 
+#btn-search {
+    width: 40%; 
+    margin: 0 auto; 
+    display: block; 
+    padding: 10px; 
+    background-color: #6c757d; 
+    color: white; 
+    border-radius: 10px; 
+    text-align: center;
+}
+
+#btn-add:hover, 
+#btn-search:hover {
+    background-color: #2391e6;
+    cursor: pointer;
+}
+
+/* List display */
+#word-list span, #result-output span {
+    font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .card-body {
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+    }
+}
